@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+
+    <!-- Firebase SDKs (No Storage Required) -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+<body>
+    <header>
+        <h1>FlowMate</h1>
+        <p>Welcome to your menstruation emergency companion!</p>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="app.html">Dashboard</a></li>
+            <li><a href="profile.html" class="active">Profile</a></li>
+            <li><button id="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+    <!-- Main Profile Content -->
+    <main>
+        <section id="profile-section">
+            <h2>Edit Profile</h2>
+            <form id="profile-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Full Name" required>
+
+                <label for="contact-number">Contact Number:</label>
+                <input type="tel" id="contact-number" placeholder="+1234567890" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="example@example.com" required readonly> 
+
+                <label for="date-of-birth">Date of Birth:</label>
+                <input type="date" id="date-of-birth">
+
+                <label for="address">Address:</label>
+                <textarea id="address" placeholder="City, State, Country"></textarea>
+
+                <label for="occupation">Occupation:</label>
+                <input type="text" id="occupation" placeholder="e.g., Software Engineer">
+
+                <label for="bio">Bio:</label>
+                <textarea id="bio" placeholder="A short description about yourself"></textarea>
+
+                <label for="skills">Skills/Interests (comma-separated):</label>
+                <input type="text" id="skills" placeholder="e.g., Cooking, Gardening">
+
+                <label for="emergency-contact">Emergency Contact:</label>
+                <input type="tel" id="emergency-contact" placeholder="+9876543210">
+
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+
+        <section id="profile-display">
+            <h2>Your Profile</h2>
+            <div id="profile-info"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2023 FlowMate. All rights reserved.</p>
+    </footer>
+
+    <script src="profile.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

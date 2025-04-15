@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlowMate - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FlowMate</h1>
+        <p>Welcome to your menstruation emergency companion!</p>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="app.html">Dashboard</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><button id="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+    
+
+    <main>
+        <!-- User Information Section -->
+        <section id="user-info">
+            <h2>Your Information</h2>
+            <p>Email: <span id="user-email">Loading...</span></p>
+            <p>Availability: <span id="user-availability">Loading...</span></p>
+        </section>
+
+                <!-- Menstrual Cycle Tracker -->
+                <section id="menstrual-cycle-tracker">
+                    <h2>Menstrual Cycle Tracker</h2>
+                    <form id="cycle-form">
+                        <label for="start-date">Start Date:</label>
+                        <input type="date" id="start-date" required />
+                        <label for="cycle-length">Cycle Length (days):</label>
+                        <input type="number" id="cycle-length" required min="20" max="40" />
+                        <button type="submit">Save Cycle</button>
+                    </form>
+                    <div id="cycle-info"></div>
+                </section>
+
+        <!-- Current Location Section -->
+        <section id="user-location">
+            <h2>Your Current Location</h2>
+            <p id="current-location">Fetching location...</p>
+        </section>
+
+        <!-- Availability Toggle Section -->
+        <section id="availability-section">
+            <h2>Manage Your Availability</h2>
+            <button id="toggle-status">Set as Available</button>
+            
+        </section>
+
+        <!-- Notifications Section -->
+        <section id="notifications-section">
+            <h2>Notifications</h2>
+            <ul id="notifications-list"></ul>
+        </section>
+
+        <!-- Nearby Helpers (Google Maps Integration) -->
+        <section class="map-section">
+            <h2>Nearby Helpers</h2>
+            <div id="map" style="height: 400px; width: 100%;">Loading map...</div>
+        </section>
+
+        <!-- Nearby Helpers (user info) -->
+        <section id="nearby-helpers-section">
+            <h2>Nearby Helpers</h2>
+            <ul id="helpers-list"></ul>
+        </section>
+        
+
+        
+        
+
+        
+
+    </main>
+    
+    <footer>
+        <p>© 2023 FlowMate. All rights reserved.</p>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <!-- Google Maps API Script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXxr66brmZXUTNBSidLogZYc6YbsqkIvU"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>

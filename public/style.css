@@ -1,0 +1,242 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF0F3; /* Soft blush background for a welcoming vibe */
+    color: #590D22; /* Deep red for text to anchor readability */
+}
+
+header {
+    text-align: center;
+    background-color: #C9184A; /* Bold pink-red for header */
+    color: white;
+    padding: 2rem;
+    border-bottom: 8px solid #800F2F; /* Contrasting deep tone for flair */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+header p {
+    margin: 0;
+    font-size: 1.3rem;
+    font-style: italic;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+    background-color: #FFCCD5; /* Subtle, soothing pink for sections */
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Gentle shadow for depth */
+    border-left: 6px solid #FF758F; /* Accent color for emphasis */
+    color: #590D22; /* Consistent text color */
+}
+
+h2, h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #A4133C; /* Elegant crimson for headings */
+    text-transform: uppercase; /* Adds hierarchy */
+    text-shadow: 2px 2px #FFF0F3; /* Subtle glow effect */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.8s ease-in-out; /* Add fade-in animation */
+}
+
+label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #590D22; /* Deep text color for emphasis */
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 2px solid #FFB3C1; /* Soft pink border for inputs */
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #FFF0F3; /* Gentle blush for inputs */
+    color: #590D22; /* Text retains clarity */
+}
+
+input:focus, textarea:focus {
+    outline: none; /* Removes the default outline */
+    border-color: #FF4D6D; /* Matches your vibrant theme */
+    box-shadow: 0 0 8px rgba(255, 77, 109, 0.5); /* Adds a soft glow */
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background-color: #FF4D6D; /* Vibrant pink for action buttons */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Adds a dynamic effect */
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #A4133C; /* Bold hover effect */
+    transform: scale(1.07); /* Slightly more noticeable enlargement */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhanced shadow for a pop effect */
+}
+
+/* Center Forms on the Page */
+#forms-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh; /* Ensures the forms are vertically centered */
+    flex-direction: column;
+}
+
+/* Profile Picture Styling */
+#profile-picture {
+    margin-top: 1rem;
+}
+
+img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 1rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Elegant profile picture effect */
+    border: 4px solid #FF758F; /* Accent border for pop */
+}
+
+/* Profile Info Styling */
+#profile-info {
+    text-align: left;
+    padding: 1.5rem;
+    border-radius: 12px;
+    background-color: #FFF0F3; /* Light background to stand out */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Creates depth */
+    color: #590D22; /* Text ties to consistent theme */
+}
+
+#profile-info p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    line-height: 1.5;
+}
+
+#profile-info img {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #FFB3C1; /* Matches design tone */
+    border-radius: 15px;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #800F2F; /* Rich, bold maroon for navbar */
+    padding: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Slight depth effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 4px solid #FF4D6D; /* Vibrant transition for structure */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a, nav button {
+    color: white; /* Consistent clarity for links */
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+nav a:hover, nav button:hover {
+    background-color: #A4133C; /* Crimson for hover effect */
+    color: #FFF0F3; /* Light color for visibility */
+}
+
+nav a.active {
+    font-weight: bold;
+    background-color: #FF4D6D; /* Active link highlight */
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds subtle depth */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    form {
+        width: 100%; /* Full width for small screens */
+        margin: auto;
+    }
+
+    input, textarea, button {
+        font-size: 1rem; /* Adjusted for smaller screens */
+        padding: 0.6rem; /* Reduced padding */
+    }
+
+    #profile-info img {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation items */
+    }
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
